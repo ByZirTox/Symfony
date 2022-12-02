@@ -11,7 +11,12 @@ import './styles/app.scss';
 // start the Stimulus application
 import './bootstrap';
 
+require('bootstrap');
+
+// or you can include specific pieces
+// require('bootstrap/js/dist/tooltip');
 
 
-console.log('Hello Webpack Encore !')
-
+$(document).ready(function() {
+    $('[data-toggle="popover"]').popover();
+});
